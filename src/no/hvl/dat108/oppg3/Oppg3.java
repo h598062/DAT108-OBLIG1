@@ -58,10 +58,10 @@ public class Oppg3 {
 		System.out.println("Alle ansatte sortert etter lønn, stigende rekkefølge:\n" + ansatte);
 
 		// h
-		int isum = IntStream.range(1, 1000)
+		long isum = IntStream.range(1, 1000)
 		                    .filter(x -> x % 3 == 0 || x % 5 == 0)
-		                    .sum();
-		System.out.println("Sum av tall delelig med 3 og 5 mellom 1 og 1000: " + isum);
+		                    .count();
+		System.out.println("Sum av tall delelig med 3 eller 5 mellom 1 og 1000: " + isum);
 
 	}
 }
