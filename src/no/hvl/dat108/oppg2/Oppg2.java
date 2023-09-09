@@ -30,11 +30,19 @@ public class Oppg2 {
 				ansatt.setAarslonn(ansatt.getAarslonn() + 1000);
 			}
 		};
-
-		lonnsoppgjor(ansatte, prosentForMenn);
-		lonnsoppgjor(ansatte, kronetillegg);
-		lonnsoppgjor(ansatte, prosenttillegg);
+		System.out.println(ansatte);
+		System.out.println("Lavlønnstillegg:");
 		lonnsoppgjor(ansatte, lavlonntillegg);
+		System.out.println(ansatte);
+		System.out.println("Legge til prosenter for menn:");
+		lonnsoppgjor(ansatte, prosentForMenn);
+		System.out.println(ansatte);
+		System.out.println("Fast kronetillegg:");
+		lonnsoppgjor(ansatte, kronetillegg);
+		System.out.println(ansatte);
+		System.out.println("Fast prosenttillegg:");
+		lonnsoppgjor(ansatte, prosenttillegg);
+		System.out.println(ansatte);
 	}
 	private static void lonnsoppgjor(List<Ansatt> ansatte, Consumer<Ansatt> metode){
 		ansatte.forEach(metode);
